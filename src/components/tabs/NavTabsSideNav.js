@@ -11,7 +11,7 @@ const NavTabsSideNav = () => {
         <Col>
           <Tab.Container id="left-tabs-example" defaultActiveKey="first">
             <Row>
-              <Col sm={3}>
+              <Col className="col-3">
                 <Nav variant="pills" className="flex-column">
                   <Nav.Item>
                     <Nav.Link eventKey="first">Tab 1</Nav.Link>
@@ -21,7 +21,7 @@ const NavTabsSideNav = () => {
                   </Nav.Item>
                 </Nav>
               </Col>
-              <Col sm={9}>
+              <Col className="col-9">
                 <Tab.Content>
                   <Tab.Pane eventKey="first">
                     <p>

@@ -16,7 +16,7 @@ const Header = () => {
     <Navbar expand="lg" bg="dark" variant="dark">
       <Container>
         <Navbar.Brand>
-          <Link to='/'><img className="nav_logo" src={logo} alt="Logo" /></Link>
+          <Link to='/react-base'><img className="nav_logo" src={logo} alt="Logo" /></Link>
         </Navbar.Brand>
         <Navbar.Text>
           <h1>Starter Project</h1>
