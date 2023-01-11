@@ -1,0 +1,212 @@
+// Override default variables before the import
+
+$white:#FFFFFF;
+$black: #000000; 
+
+$dark: #272727;
+$light: $white;
+$blue: #2128A6;
+$red: #73194A;
+$green: #03CEA4;
+$grey: #F2F2F2;
+$orange: #ab6b02;
+
+
+$primary: #233ED9; 
+$secondary: #30A9D9;
+
+//
+// Typography
+//
+
+$font-family-sans-serif: 'Open Sans', sans-serif !default;
+
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+
+$h1-font-size: $font-size-base * 2.187 !default; //35px
+$h2-font-size: $font-size-base * 1.5625 !default; //25px
+$h3-font-size: $font-size-base * 1.375 !default; //22px
+$h4-font-size: $font-size-base * 1.125 !default; //18px
+$h5-font-size: $font-size-base * 1 !default; //16px
+$h6-font-size: 0.875rem !default; //14px
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem !default;
+$spacers: () !default;
+
+$spacers: map-merge(
+  (
+    0: 0,
+    1: (
+      $spacer * 0.25,
+    ),
+    2: (
+      $spacer * 0.5,
+    ),
+    3: $spacer,
+    4: (
+      $spacer * 1.5,
+    ),
+    5: (
+      $spacer * 3,
+    ),
+    6: (
+      $spacer * 4.5,
+    ),
+    7: (
+      $spacer * 6,
+    ),
+    8: (
+      $spacer * 8,
+    ),
+  ),
+  $spacers
+);
+
+// MIXINS
+
+@mixin gradient($color: #F5F5F5, $start: #EEE, $stop: #FFF) {
+    background: $color;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(0, $start), color-stop(1, $stop));
+    background: -ms-linear-gradient(bottom, $start, $stop);
+    background: -moz-linear-gradient(center bottom, $start 0%, $stop 100%);
+    background: -o-linear-gradient($stop, $start);
+  }
+  
+  @mixin drop-shadow($x-axis: 0, $y-axis: 1px, $blur: 2px, $alpha: 0.1) {
+    -webkit-box-shadow: $x-axis $y-axis $blur rgba(0, 0, 0, $alpha);
+    -moz-box-shadow: $x-axis $y-axis $blur rgba(0, 0, 0, $alpha);
+    box-shadow: $x-axis $y-axis $blur rgba(0, 0, 0, $alpha);
+  }
+  
+  @mixin border-radius($arguments) {
+    -webkit-border-radius: $arguments;
+    -moz-border-radius: $arguments;
+    border-radius: $arguments;
+  }
+  
+  @mixin opacity($opacity: 0.5) {
+    -moz-opacity: $opacity;
+    -khtml-opacity: $opacity;
+    -webkit-opacity: $opacity;
+    opacity: $opacity;
+    $opperc: $opacity * 100;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=${opperc})";
+    filter:"alpha(opacity=${opperc})";
+  }
+  
+  @mixin transition-duration($duration: 0.2s) {
+    -moz-transition-duration: $duration;
+    -webkit-transition-duration: $duration;
+    -o-transition-duration: $duration;
+    transition-duration: $duration;
+  }
+  
+  @mixin transform($arguments) {
+    -webkit-transform: $arguments;
+    -moz-transform: $arguments;
+    -o-transform: $arguments;
+    -ms-transform: $arguments;
+    transform: $arguments;
+  }
+  
+  @mixin transition ($transition) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
+  }
+  
+  @mixin inner-shadow($horizontal:0, $vertical:1px, $blur:2px, $alpha: 0.4) {
+    -webkit-box-shadow: inset $horizontal $vertical $blur rgba(0, 0, 0, $alpha);
+    -moz-box-shadow: inset $horizontal $vertical $blur rgba(0, 0, 0, $alpha);
+    box-shadow: inset $horizontal $vertical $blur rgba(0, 0, 0, $alpha);
+  }
+  
+  @mixin box-shadow($arguments) {
+    -webkit-box-shadow: $arguments;
+    -moz-box-shadow: $arguments;
+    box-shadow: $arguments;
+  }
+  
+  @mixin text-shadow($arguments) {
+    -webkit-text-shadow: $arguments;
+    -moz-text-shadow: $arguments;
+    text-shadow: $arguments;
+  }
+  
+  @mixin box-sizing($sizing: border-box) {
+    -ms-box-sizing: $sizing;
+    -moz-box-sizing: $sizing;
+    -webkit-box-sizing: $sizing;
+    box-sizing: $sizing;
+  }
+  
+  @mixin appearance($arguments) {
+    -webkit-appearance: $arguments;
+    -moz-appearance: $arguments;
+    appearance: $arguments;
+  }
+
+  // END MIXINS
+
+
+// RESPONSIVE MEDIA QUERIES
+// Small tablets and large smartphones (landscape view)
+$screen-xs-min: 0px;
+
+$screen-xs-max: 360px;
+
+$screen-sm-min: 767px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Small devices
+@mixin xs {
+  @media (min-width: #{$screen-xs-min}) {
+    @content;
+  }
+}
+
+// Small devices
+@mixin sm {
+  @media (max-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';

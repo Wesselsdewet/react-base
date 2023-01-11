@@ -1,0 +1,9 @@
+@import "../../custom.scss";
+
+.page-header-banner-background {
+  background-color: rgba(0, 0, 0, 0.171);
+  height: 200px;
+  @include md {
+    height: 400px;
+  }
+}
