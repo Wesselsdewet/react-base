@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-base/static/css/main.c2174731.css",
-    "main.js": "/react-base/static/js/main.5131ab68.js",
+    "main.js": "/react-base/static/js/main.07c6b9b7.js",
     "static/js/787.3b3d629b.chunk.js": "/react-base/static/js/787.3b3d629b.chunk.js",
     "static/media/alienware-wallpaper-1920x1080.jpg": "/react-base/static/media/alienware-wallpaper-1920x1080.1efa193f5a44063c027e.jpg",
     "static/media/logo.svg": "/react-base/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
@@ -11,11 +11,11 @@
     "static/media/slick.woff": "/react-base/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/react-base/index.html",
     "main.c2174731.css.map": "/react-base/static/css/main.c2174731.css.map",
-    "main.5131ab68.js.map": "/react-base/static/js/main.5131ab68.js.map",
+    "main.07c6b9b7.js.map": "/react-base/static/js/main.07c6b9b7.js.map",
     "787.3b3d629b.chunk.js.map": "/react-base/static/js/787.3b3d629b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c2174731.css",
-    "static/js/main.5131ab68.js"
+    "static/js/main.07c6b9b7.js"
   ]
 }
