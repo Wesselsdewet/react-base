@@ -4,12 +4,8 @@ import "./Header.scss";
 import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 import { Nav } from "react-bootstrap";
-// import { NavDropdown } from "react-bootstrap";
-// import MainNav from "../navigation/MainNav";
 
 import logo from "../../assets/logo.svg";
-/* import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col"; */
 
 const Header = () => {
   return (
