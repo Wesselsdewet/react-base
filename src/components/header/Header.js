@@ -24,16 +24,16 @@ const Header = () => {
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Nav className="ml-auto">
-            <NavLink to="/" className="nav-link" exact>
+            <NavLink to="/react-base" className="nav-link" exact>
               Home
             </NavLink>
-            <NavLink to="/welcome" className="nav-link" exact>
+            <NavLink to="/react-base/welcome" className="nav-link" exact>
               Welcome
             </NavLink>
-            <NavLink to="/products" className="nav-link">
+            <NavLink to="/react-base/products" className="nav-link">
               Products
             </NavLink>
-            <NavLink to="/contact-us" className="nav-link">
+            <NavLink to="/react-base/contact-us" className="nav-link">
               Contact Us
             </NavLink>
           </Nav>

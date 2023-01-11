@@ -20,16 +20,16 @@ function App() {
       </header>
       <main>
         <Switch>
-          <Route path="/" exact>
+          <Route path="/react-base" exact>
             <Home />
           </Route>
-          <Route path="/welcome">
+          <Route path="/react-base/welcome">
             <Welcome />
           </Route>
-          <Route path="/products">
+          <Route path="/react-base/products">
             <Products />
           </Route>
-          <Route path="/contact-us">
+          <Route path="/react-base/contact-us">
             <Contact />
           </Route>
         </Switch>
