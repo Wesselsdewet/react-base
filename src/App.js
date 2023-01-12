@@ -11,6 +11,7 @@ import Welcome from "./pages/WelcomePage";
 import Products from "./pages/ProductsPage";
 import Contact from "./pages/ContactPage";
 import Footer from "./components/footer/Footer";
+import AdminLandingPage from "./components/backend/AdminLandingPage";
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
           </Route>
           <Route path="/react-base/contact-us">
             <Contact />
+          </Route>
+          <Route path="/react-base/admin">
+            <AdminLandingPage />
           </Route>
         </Switch>
       </main>

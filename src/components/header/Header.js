@@ -12,7 +12,9 @@ const Header = () => {
     <Navbar expand="lg" bg="dark" variant="dark">
       <Container>
         <Navbar.Brand>
-          <Link to='/react-base'><img className="nav_logo" src={logo} alt="Logo" /></Link>
+          <Link to="/react-base">
+            <img className="nav_logo" src={logo} alt="Logo" />
+          </Link>
         </Navbar.Brand>
         <Navbar.Text>
           <h1>Starter Project</h1>
@@ -31,6 +33,9 @@ const Header = () => {
             </NavLink>
             <NavLink to="/react-base/contact-us" className="nav-link">
               Contact Us
+            </NavLink>
+            <NavLink to="/react-base/admin" className="nav-link">
+              Admin
             </NavLink>
           </Nav>
         </Navbar.Collapse>

@@ -1,11 +1,10 @@
-import { useState, useEffect, useCallback } from "react";
-
+import React, { useState, useEffect, useCallback } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 
-import PageHeaderBanner from "../components/banners/PageHeaderBanner";
-import ProductsList from "../components/cards/ProductsList";
+import AddProductForm from "../forms/AddProductForm";
+import ProductsList from "../cards/ProductsList";
 
-const Products = () => {
+const AdminLandingPage = () => {
   const [products, setProduct] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -43,6 +42,18 @@ const Products = () => {
     fetchProductHandler();
   }, [fetchProductHandler]);
 
+  async function addProductHandler(product) {
+    const response = await fetch("https://react-http-7f255-default-rtdb.firebaseio.com/products.json", {
+      method: "POST",
+      body: JSON.stringify(product),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const data = await response.json();
+    console.log(data);
+  }
+
   let content = <p>Found no products.</p>;
 
   if (products.length > 0) {
@@ -58,23 +69,20 @@ const Products = () => {
   }
 
   return (
-    <div id="welcome">
-      <PageHeaderBanner />
-      <Container>
-        <Row>
-          <Col md={12} className="mb-5">
-            <h2 className="text-center">The Products Page</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut bibendum et lacus ac dapibus. Ut ornare blandit tellus vitae vulputate. Curabitur at orci velit.
-              Vestibulum eget mi sit amet mi sodales hendrerit. Aenean finibus lacinia tortor non ultrices. Quisque vehicula ex dui, eu eleifend augue lacinia ac. Etiam tincidunt,
-              eros et eleifend cursus, urna massa hendrerit odio, laoreet tincidunt diam odio sed massa.
-            </p>
-          </Col>
-          <Col md={12}>{content}</Col>
-        </Row>
-      </Container>
+    <div id="admin-landing-page">
+      <React.Fragment>
+        <Container>
+          <Row>
+            <Col>
+              <h2 className="text-center">The Admin Landing Page</h2>
+              <AddProductForm onAddProduct={addProductHandler} />
+            </Col>
+          </Row>
+        </Container>
+        {content}
+      </React.Fragment>
     </div>
   );
 };
 
-export default Products;
+export default AdminLandingPage;
